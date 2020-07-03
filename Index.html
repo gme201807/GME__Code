@@ -1,0 +1,2147 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-title" />
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="x-rim-auto-match" content="none" />
+
+    <title i18n i18n-html="首页">首页</title>
+
+    <!-- ICO -->
+    <link href="./favicon.ico" rel="shortcut icon" />
+
+    <!-- base css -->
+    <link href="./Theme/DApp/css/base.css" rel="stylesheet" />
+    <!--自写-->
+    <link href="./Theme/DApp/css/app.css" rel="stylesheet" />
+</head>
+<body>
+
+    <!--首页-->
+    <div class="t-warp page-item" id="page0">
+        <header class="header ">
+            <div class="header-box">
+                <div class="language navigation">
+                    <span class="language-button"><img src="./Theme/DApp/img/dj.png"></span>
+
+                    <div class="choose-lang">
+                        <div class="choose-lang-box navigation-box">
+                            <div class="choose-lang-btn">
+                                <i class="language-chn"></i>
+                                <a href="javascript:showPage(1);" i18n i18n-html="资产明细">资产明细</a>
+                            </div>
+                            <div class="choose-lang-btn">
+                                <i class="language-en"></i>
+                                <a href="javascript:showPage(2);" i18n i18n-html="分享推广">分享推广</a>
+                            </div>
+                            <div class="choose-lang-btn">
+                                <i class="language-en"></i>
+                                <a href="javascript:showPage(3);" i18n i18n-html="联盟简介">联盟简介</a>
+                            </div>
+                            <div class="choose-lang-btn">
+                                <i class="language-en"></i>
+                                <a href="javascript:showPage(4);" i18n i18n-html="钱包教程">钱包教程</a>
+                            </div>
+                            <div class="choose-lang-btn">
+                                <i class="language-en"></i>
+                                <a href="javascript:showPage(5);" i18n i18n-html="常见问题">常见问题</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo" i18n i18n-html="以太节点联盟">
+                    以太节点联盟
+                </div>
+                <div class="language">
+                    <span class="switch-button data-language-i18n-curr">
+                        <i class="language-zh-CN"></i>
+                    </span>
+
+                    <div class="choose-switch">
+                        <div class="choose-lang-box data-language-i18n">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="container no-bottom background">
+            <div class="balance">
+                <div class="balance-history">
+                    <ul>
+                        <li class="home-li">
+                            <h3 class="home-h3 data-contractState9_40">--</h3>
+                            <span i18n i18n-html="参与质押总量（ETH）">参与质押总量（ETH）</span>
+                        </li>
+                    </ul>
+                    <img onclick="signIn();" id="signIn_img" class="balance-img" src="./Theme/DApp/img/Signin.png" />
+                </div>
+
+                <div class="balance-history">
+                    <ul>
+                        <li>
+                            <h3 class="data-balance">--</h3>
+                            <span i18n i18n-html="余额">余额</span>
+                        </li>
+                        <li>
+                            <span class="grade">
+                                <img src="./Theme/DApp/img/data.png" />
+                                <i style="display:none" class="data-contractUserInfo2">--</i>
+                                <i class="data-contractUserInfo17">--</i>
+                            </span>
+                        </li>
+                        <li>
+                            <h3 class="data-balance-ett">--</h3>
+                            <span>GME</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="home">
+                <!--购买门票-->
+                <div class="general centered">
+                    <span i18n i18n-html="通令兑振">通令兑振</span>
+                </div>
+                <div class="investment-list">
+                    <div class="investment-info">
+                        <p i18n i18n-html="当前价格">当前价格</p>
+                        <p>
+                            <i class="data-showethWei">1</i>ETH=<i class="data-contractState4">--</i>GME
+                        </p>
+                    </div>
+                    <a href="javascript:showPage(6);" class="investment-more" i18n i18n-html="购买">购买</a>
+                </div>
+                <p class="home-p" style="color:red;" i18n i18n-html="注:所有参与者必须先购买通令GME才能进场">注:所有参与者必须先购买通令GME才能进场</p>
+                <!--质押投资-->
+                <div class="nodelevel nodelevel-1" style="display:none">
+                    <div class="general color1">
+                        <img src="./Theme/DApp/img/z1.png" />
+                        <span i18n i18n-html="初级节点">初级节点</span>
+                    </div>
+                    <div class="investment-list">
+                        <div class="investment-info">
+                            <p i18n i18n-html="数量(ETH)">数量(ETH)</p>
+                            <p><span class="data-contractState12">--</span>~<span class="data-contractState13">--</span></p>
+                        </div>
+                        <a href="javascript:void(0);" onclick="invest_3(12,13)" class="investment-more color1 nodelevel-no" i18n i18n-html="参与">参与</a>
+                        <a href="javascript:showInvestRecord(0);" class="investment-more color1 nodelevel-act" style="display:none" i18n i18n-html="参与记录">参与记录</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="nodelevel nodelevel-2" style="display:none">
+                    <div class="general color2">
+                        <img src="./Theme/DApp/img/z2.png" />
+                        <span i18n i18n-html="中级节点">中级节点</span>
+                    </div>
+                    <div class="investment-list">
+                        <div class="investment-info">
+                            <p i18n i18n-html="数量(ETH)">数量(ETH)</p>
+                            <p><span class="data-contractState13">--</span>~<span class="data-contractState14">--</span></p>
+                        </div>
+                        <a href="javascript:void(0);" onclick="invest_3(13, 14)" class="investment-more color2 nodelevel-no" i18n i18n-html="参与">参与</a>
+                        <a href="javascript:showInvestRecord(0);" class="investment-more color2 nodelevel-act" style="display:none" i18n i18n-html="参与记录">参与记录</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="nodelevel nodelevel-3" style="display:none">
+                    <div class="general color3">
+                        <img src="./Theme/DApp/img/z3.png" />
+                        <span i18n i18n-html="高级节点">高级节点</span>
+                    </div>
+                    <div class="investment-list">
+                        <div class="investment-info">
+                            <p i18n i18n-html="数量(ETH)">数量(ETH)</p>
+                            <p><span class="data-contractState14">--</span>~<span class="data-contractState15">--</span></p>
+                        </div>
+                        <a href="javascript:void(0);" onclick="invest_3(14, 15)" class="investment-more color3 nodelevel-no" i18n i18n-html="参与">参与</a>
+                        <a href="javascript:showInvestRecord(0);" class="investment-more color3 nodelevel-act" style="display:none" i18n i18n-html="参与记录">参与记录</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="nodelevel nodelevel-4" style="display:none">
+                    <div class="general color4">
+                        <img src="./Theme/DApp/img/z4.png" />
+                        <span i18n i18n-html="超级节点">超级节点</span>
+                    </div>
+                    <div class="investment-list">
+                        <div class="investment-info">
+                            <p i18n i18n-html="数量(ETH)">数量(ETH)</p>
+                            <p><span class="data-contractState15">--</span>~<span class="data-contractState16">--</span></p>
+                        </div>
+                        <a href="javascript:void(0);" onclick="invest_3(15, 16)" class="investment-more color4 nodelevel-no" i18n i18n-html="参与">参与</a>
+                        <a href="javascript:showInvestRecord(0);" class="investment-more color4 nodelevel-act" style="display:none" i18n i18n-html="参与记录">参与记录</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="nodelevel nodelevel-5" style="display:none">
+                    <div class="general color5">
+                        <img src="./Theme/DApp/img/z5.png" />
+                        <span i18n i18n-html="顶级节点">顶级节点</span>
+                    </div>
+                    <div class="investment-list">
+                        <div class="investment-info">
+                            <p i18n i18n-html="数量(ETH)">数量(ETH)</p>
+                            <p><span class="data-contractState16">--</span><span i18n i18n-html="或以上">或以上</span></p>
+                        </div>
+                        <a href="javascript:void(0);" onclick="invest_3(16, 16)" class="investment-more color5 nodelevel-no" i18n i18n-html="参与">参与</a>
+                        <a href="javascript:showInvestRecord(0);" class="investment-more color5 nodelevel-act" style="display:none" i18n i18n-html="参与记录">参与记录</a>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+
+                <div class="clr"></div>
+                <!--联盟援助金-->
+                <div class="balance-history">
+                    <ul>
+                        <li>
+                            <h3 class="data-contractState17">--</h3>
+                            <span i18n i18n-html="联盟援助金(ETH)">联盟援助金(ETH)</span>
+                        </li>
+
+                        <li>
+                            <h3 class="data-contractState18">--</h3>
+                            <span i18n i18n-html="倒计时">倒计时</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--精英奖-->
+                <div class="balance-history">
+                    <ul>
+                        <li>
+                            <h3 class="data-contractState30">--</h3>
+                            <span i18n i18n-html="合伙人基金(ETH)">合伙人基金(ETH)</span>
+                        </li>
+
+                        <li>
+                            <h3 class="data-contractState19">--</h3>
+                            <span i18n i18n-html="精英奖(ETH)">精英奖(ETH)</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--验证节点-->
+                <div class="titleBG" i18n i18n-html="部分验证节点">部分验证节点</div>
+                <div class="home_seven">
+                    <div class="adImg">
+                        <div><img src="./Theme/DApp/img/p4.png"></div>
+                        <div><img src="./Theme/DApp/img/p2.png"></div>
+                        <div><img src="./Theme/DApp/img/p3.png"></div>
+                    </div>
+                    <div class="adImg">
+                        <div><img src="./Theme/DApp/img/p1.png"></div>
+                        <div><img src="./Theme/DApp/img/p5.png"></div>
+                        <div><img src="./Theme/DApp/img/p6.png"></div>
+                    </div>
+                    <div class="adImg">
+                        <div><img src="./Theme/DApp/img/p7.png"></div>
+                        <div><img src="./Theme/DApp/img/p8.png"></div>
+                        <div><img src="./Theme/DApp/img/p9.png"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--资产页-->
+    <div class="page-item" id="page1" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="资产明细">资产明细</div>
+        </header>
+        <section class="container no-bottom">
+            <div class="clr"></div>
+            <div class="assets-details">
+                <div class="assets-details box">
+                    <div class="one">
+                        <img src="./Theme/DApp/img/logo.png">
+                        <span class="data-contractUserInfo2">--</span>
+                        <span style="display:none" class="data-contractUserInfo17">--</span>
+                    </div>
+                    <div class="assets-details-list">
+                        <div class="investment-info">
+                            <p>
+                                <i i18n i18n-html="未结算收益">未结算收益</i>
+                            </p>
+                            <p>ETH：<i class="data-contractUserInfo-Unsettled-ETH">--</i></p>
+                            <p>GME：<i onclick="showPage(11)" class="data-contractUserInfo-Unsettled-ETT">--</i></p>
+                            <p>
+                                GME<i i18n i18n-html="可提现">可提现</i>
+                                ：<i class="data-contractUserInfo-cashout-ETT">--</i>
+                            </p>
+                        </div>
+                        <div class="investment-info">
+                            <p>
+                                <i i18n i18n-html="可提现收益">可提现收益</i>
+                            </p>
+                            <p>ETH：<i class="data-contractUserInfo12">--</i></p>
+                            <p>GME：<i class="data-contractUserInfo13">--</i></p>
+                            <p>
+                                <i i18n i18n-html="手续费">手续费</i>
+                                ：<i class="data-contractUserInfo-cashout-settle-poundage-ETT">--</i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="investment-toolbar">
+                        <button onclick="settlement();" type="button" class="investment-btn-1" i18n i18n-html="结算">结算</button>
+                        <button onclick="cashout()" type="button" class="investment-btn-2" i18n i18n-html="提现">提现</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assets">
+                <div class="bill-text">
+                    <div class="bill-title">
+                        <span class="fl" i18n i18n-html="质押级别">质押级别</span>
+                        <span class="bill-time fr data-contractUserInfo-Invest-Level">--</span>
+                    </div>
+                    <div class="bill-title" style="display:none">
+                        <span class="fl" i18n i18n-html="团队等级">团队等级</span>
+                        <span class="bill-time fr data-contractUserInfo4">--</span>
+                    </div>
+                    <div class="bill-title" style="display:none">
+                        <span class="fl" i18n i18n-html="VIP级别">VIP级别</span>
+                        <span class="bill-time fr data-contractUserInfo2">--</span>
+                    </div>
+                    <div class="bill-title" style="display:none">
+                        <span class="fl" i18n i18n-html="当前等级">当前等级</span>
+                        <span class="bill-time fr data-contractUserInfo17">--</span>
+                    </div>
+                    <div class="bill-title">
+                        <span class="fl" i18n i18n-html="团队等级">团队等级</span>
+                        <span class="bill-time fr data-contractUserInfo17">--</span>
+                    </div>
+                    <div class="bill-title">
+                        <span class="fl" i18n i18n-html="质押数量">质押数量</span>
+                        <span class="bill-time fr data-contractUserInfo-Invest-Money">--</span>
+                    </div>
+                    <div class="bill-title">
+                        <span class="fl" i18n i18n-html="我的静态收益">我的静态收益</span>
+                        <span class="bill-time fr data-contractUserInfo-Invest-AdduoStaticBonus">--</span>
+                    </div>
+                    <div class="bill-title">
+                        <span class="fl" i18n i18n-html="动态收益">动态收益</span>
+                        <span class="bill-time fr data-contractUserInfo-Invest-AdduoDynamicBonus">--</span>
+                    </div>
+                    <div class="bill-title">
+                        <span class="fl" i18n i18n-html="动静态出局还差">动静态出局还差</span>
+                        <span class="bill-time fr data-contractUserInfo-Invest-OutMoney">--</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--分享推广-->
+    <div class="page-item" id="page2" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="分享">分享</div>
+        </header>
+        <section class="container share tradeList">
+            <div class="tab-title deal-title">
+                <ul>
+                    <li class="active">
+                        <span i18n i18n-html="邀请链接">邀请链接</span>
+                    </li>
+                    <li class="">
+                        <span i18n i18n-html="我的分享">我的分享</span>
+                    </li>
+                    <li class="">
+                        <span i18n i18n-html="社区明细">社区明细</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-container trade-tab-container">
+                <div class="tab-box" style="display: block;">
+                    <p class="first" i18n i18n-html="参与质押挖矿成功即可获取专属邀请链接邀请好友参与，您将获得整个团队相应比例的收益，邀请人数越多，获得邀请奖励越多！">参与质押挖矿成功即可获取专属邀请链接邀请好友参与，您将获得整个团队相应比例的收益，邀请人数越多，获得邀请奖励越多！</p>
+                    <p class="firstTitle">
+                        <i i18n i18n-html="您的邀请链接">您的邀请链接</i>:
+                        <i class="data-inviteUrl"></i>
+                        <button type="button" class="button data-inviteUrl-copy copyData" data-title="邀请链接" data-value="" style="margin-top: .3rem;" i18n i18n-html="复制邀请链接">复制邀请链接</button>
+                    </p>
+                    <div class="form-group" style="margin-bottom:1rem;">
+                        <label class="form-label" i18n i18n-html="邀请码">邀请码</label>
+                        <div class="form-control">
+                            <input type="text" class="text-input data-contractUserInfoCode" readonly autocomplete="off" maxlength="12">
+                            <button type="button" class="data-contractUserInfoCode-copy copyData" data-title="邀请码" data-value="" i18n i18n-html="复制">复制</button>
+                        </div>
+                    </div>
+
+                    <div class="form-group nodelevel nodelevel-no" style="display:none">
+                        <label class="form-label" i18n i18n-html="激活码">激活码</label>
+                        <div class="form-control">
+                            <input type="text" class="text-input activationCode" placeholder="请输入激活码" i18n i18n-placeholder="请输入激活码" autocomplete="off" maxlength="12">
+                            <button type="button" i18n i18n-html="确认" onclick="useCode()">确认</button>
+                        </div>
+                    </div>
+                    <p class="home-p nodelevel nodelevel-no" style="display:none" i18n i18n-html="注：所有激活码必须在质押挖矿上线前激活，过期无效。">注：所有激活码必须在质押挖矿上线前激活，过期无效。</p>
+
+                    <!--<div class="clr"></div>-->
+                    <a href="javascript:showPage(0);" class="button data-contractUserInfoCode-div2" i18n i18n-html="马上参与质押挖矿，获取链接">马上参与质押挖矿，获取链接</a>
+                </div>
+
+                <div class="tab-box">
+                    <div class="record-list">
+                        <div class="record-list-title">
+                            <span i18n i18n-html="序号">序号</span>
+                            <span i18n i18n-html="用户ID">用户ID</span>
+                            <span i18n i18n-html="VIP级别">VIP级别</span>
+                            <span i18n i18n-html="累计质押">累计质押</span>
+                        </div>
+                        <div class="data-userOffspring">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-box">
+
+                    <div class="bill-text">
+                        <div class="bill-title">
+                            <span class="fl">ID</span>
+                            <span class="bill-time fr data-contractUserInfoCode">--</span>
+                        </div>
+                        <div class="bill-title">
+                            <span class="fl" i18n i18n-html="上级ID">上级ID</span>
+                            <span class="bill-time fr data-contractUserInfo-rCode">--</span>
+                        </div>
+                        <div class="bill-title">
+                            <span class="fl" i18n i18n-html="直推人数">直推人数</span>
+                            <span class="bill-time fr data-contractUserInfo-RNumber">--</span>
+                        </div>
+                        <div class="bill-title">
+                            <span class="fl" i18n i18n-html="直推业绩">直推业绩</span>
+                            <span class="bill-time fr data-contractUserInfo14">--</span>
+                        </div>
+                        <div class="bill-title">
+                            <span class="fl" i18n i18n-html="团队人数">团队人数</span>
+                            <span class="bill-time fr data-contractUserInfo19">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--联盟简介-->
+    <div class="page-item" id="page3" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="联盟简介">联盟简介</div>
+        </header>
+        <section class="container no-bottom contract">
+            <div class="tab-title deal-title">
+                <ul>
+                    <li class="active">
+                        <span i18n i18n-html="质押规则">质押规则</span>
+                    </li>
+                    <li class="">
+                        <span i18n i18n-html="合约源码" data-gourl="https://github.com/gme201807/GME_Code" onclick="gourl(this)">合约源码</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-container trade-tab-container tradeList">
+                <div class="tab-box" style="display: block;">
+                    <div class="message-list">
+                        <h3 i18n i18n-html="一、Gold Mine of Ethereum简介" style="display:none">
+                            一、Gold Mine of Ethereum简介
+                        </h3>
+                        <div class="message-text" i18n i18n-html="以太节点联盟是由一群来自全球深网极客、以太坊验证节点和ATOM原技术团队强强联合，采用最新多线性映射和同态加密技术，把币圈和矿圈联系到一起，并建立在公平公正公开的全球第一公链以太坊之上，实现一个完全去中心化自治平台。">
+                            以太节点联盟是由一群来自全球深网极客、以太坊验证节点和ATOM原技术团队强强联合，采用最新多线性映射和同态加密技术，把币圈和矿圈联系到一起，并建立在公平公正公开的全球第一公链以太坊之上，实现一个完全去中心化自治平台。
+                        </div>
+                        <div class="message-text" i18n i18n-html="以太坊矿工除了传统挖矿赚钱外，更多的是想通过入场更多验证节点和委托质押挖矿用户，造势成为更有竞争力的大型节点服务商，从而带动以太坊2.0质押挖矿领域的发展。">
+                            以太坊矿工除了传统挖矿赚钱外，更多的是想通过入场更多验证节点和委托质押挖矿用户，造势成为更有竞争力的大型节点服务商，从而带动以太坊2.0质押挖矿领域的发展。
+                        </div>
+                        <div class="message-text" i18n i18n-html="质押挖矿是基于以太坊智能合约开发出来的一种把验证节点和质押者联合起来的经济激励行为。所有用户质押的以太币都储存在以太坊区块链的智能合约里，即使技术开发人员或者用户都无法随意拿走这些以太币。一旦在预期时间内完成了利息，智能合约就会执行相应代码把以太币转到用户的账户上。此种质押挖矿的智能合约一旦发布到以太坊区块链上，所有的代码都无法被修改或者篡改。">
+                            质押挖矿是基于以太坊智能合约开发出来的一种把验证节点和质押者联合起来的经济激励行为。所有用户质押的以太币都储存在以太坊区块链的智能合约里，即使技术开发人员或者用户都无法随意拿走这些以太币。一旦在预期时间内完成了利息，智能合约就会执行相应代码把以太币转到用户的账户上。此种质押挖矿的智能合约一旦发布到以太坊区块链上，所有的代码都无法被修改或者篡改。
+                        </div>
+                        <div class="message-text" i18n i18n-html="质押挖矿和智能合约完美结合，将会带动整个去中心化金融（DeFi）行业的蓬勃发展。">
+                            质押挖矿和智能合约完美结合，将会带动整个去中心化金融（DeFi）行业的蓬勃发展。
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-box">
+                    <div class="message-list">
+                        <h3 i18n i18n-html="一、Gold Mine of Ethereum简介" style="display:none">
+                            一、Gold Mine of Ethereum简介
+                        </h3>
+                        <div class="message-text" i18n i18n-html="以太节点联盟是由一群来自全球深网极客、以太坊验证节点和ATOM原技术团队强强联 合，采用最新多线性映射和同态加密技术，把币圈和矿圈联系到一起，并建立在公平公正公开的全球第一公链以太坊之上，实现一个完全去中心化自治平台。">
+                            以太节点联盟是由一群来自全球深网极客、以太坊验证节点和ATOM原技术团队强强联 合，采用最新多线性映射和同态加密技术，把币圈和矿圈联系到一起，并建立在公平公正公开的全球第一公链以太坊之上，实现一个完全去中心化自治平台。
+                        </div>
+                        <div class="message-text" i18n i18n-html="以太坊矿工除了传统挖矿赚钱外，更多的是想通过入场更多验证节点和委托质押挖矿用户，造势成为更有竞争力的大型节点服务商，从而带动以太坊2.0质押挖矿领域的发展。">
+                            以太坊矿工除了传统挖矿赚钱外，更多的是想通过入场更多验证节点和委托质押挖矿用户，造势成为更有竞争力的大型节点服务商，从而带动以太坊2.0质押挖矿领域的发展。
+                        </div>
+                        <div class="message-text" i18n i18n-html="质押挖矿是基于以太坊智能合约开发出来的一种把验证节点和质押者联合起来的经济激励行为。所有用户质押的以太币都储存在以太坊区块链的智能合约里，即使技术开发人员或者用户都无法随意拿走这些以太币。一旦在预期时间内完成了利息，智能合约就会执行相应代码把以太币转到用户的账户上。此种质押挖矿的智能合约一旦发布到以太坊区块链上，所有的代码都无法被修改或者篡改。">
+                            质押挖矿是基于以太坊智能合约开发出来的一种把验证节点和质押者联合起来的经济激励行为。所有用户质押的以太币都储存在以太坊区块链的智能合约里，即使技术开发人员或者用户都无法随意拿走这些以太币。一旦在预期时间内完成了利息，智能合约就会执行相应代码把以太币转到用户的账户上。此种质押挖矿的智能合约一旦发布到以太坊区块链上，所有的代码都无法被修改或者篡改。
+                        </div>
+                        <div class="message-text" i18n i18n-html="质押挖矿和智能合约完美结合，将会带动整个去中心化金融（DeFi）行业的蓬勃发展。">
+                            质押挖矿和智能合约完美结合，将会带动整个去中心化金融（DeFi）行业的蓬勃发展。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--钱包教程-->
+    <div class="page-item" id="page4" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="钱包教程">钱包教程</div>
+        </header>
+        <section class="container no-bottom contract">
+            <div class="tab-title deal-title">
+                <ul>
+                    <li class="active">
+                        <span i18n i18n-html="imToken教程">imToken教程</span>
+                    </li>
+                    <li class="">
+                        <span i18n i18n-html="Trust教程">Trust教程</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-container trade-tab-container">
+                <div class="tab-box" style="display: block;">
+                    <div class="message-list">
+                        <h3 i18n i18n-html="imToken教程">imToken教程</h3>
+                        <div class="message-text" i18n i18n-html="imToken是一款移动端轻钱包App，私钥用户自持且轻便易用安全的区块链轻钱包。">
+                            imToken是一款移动端轻钱包App，私钥用户自持且轻便易用安全的区块链轻钱包。
+                        </div>
+                        <div class="message-text" i18n i18n-html="imToken支持BTC、ETH、EOS等多链资产类型，它旨在为普通用户提供一款安全放心、简单好用、功能强大的数字资产钱包应用，且imToken 2.0版本是全球为数不多的支持DApp应用的区块链知名钱包，让智能合约触手可及。">
+                            imToken支持BTC、ETH、EOS等多链资产类型，它旨在为普通用户提供一款安全放心、简单好用、功能强大的数字资产钱包应用，且imToken 2.0版本是全球为数不多的支持DApp应用的区块链知名钱包，让智能合约触手可及。
+                        </div>
+                        <div class="message-text" i18n i18n-html="任何单位组织或个人无法操控合约规则和⽀配资产，有效保证了所有参与玩家资⾦安全性和游戏规则的公平性，是最合理、最安全，也是当下最前沿最科学的商业规则。">
+                            任何单位组织或个人无法操控合约规则和⽀配资产，有效保证了所有参与玩家资⾦安全性和游戏规则的公平性，是最合理、最安全，也是当下最前沿最科学的商业规则。
+                        </div>
+
+                    </div>
+                    <div class="message-list">
+                        <h3 i18n i18n-html="下载imToken2.0钱包：">下载imToken2.0钱包：</h3>
+                        <div class="message-text">
+                            <i i18n i18n-html="1、用浏览器打开">1、用浏览器打开</i>
+                            “https://token.im”
+                            <i i18n i18n-html="imToken官网；">imToken官网；</i>
+                        </div>
+                        <div class="message-text" i18n i18n-html="2、点击界面“下载Android APK”即可安装imToken钱包；">
+                            2、点击界面“下载Android APK”即可安装imToken钱包；
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="tab-box">
+                    <div class="message-list">
+                        <h3 i18n i18n-html="Trust教程">
+                            Trust教程
+                        </h3>
+                        <div class="message-text" i18n i18n-html="Trust是一款集安全、开源、匿名于一体的移动区块链钱包应用，可以存储超过20,000种不同的基于ERC20的代币及BTC等，它能更好的帮助用户方便地管理自己的数字资产。">
+                            Trust是一款集安全、开源、匿名于一体的移动区块链钱包应用，可以存储超过20,000种不同的基于ERC20的代币及BTC等，它能更好的帮助用户方便地管理自己的数字资产。
+                        </div>
+                        <div class="message-text" i18n i18n-html="Trust于2017年推出DAPPS浏览器，是最早开放DApp应用的一款区块链轻钱包。">
+                            Trust于2017年推出DAPPS浏览器，是最早开放DApp应用的一款区块链轻钱包。
+                        </div>
+                        <div class="message-text" i18n i18n-html="2017年全球交易量最大加密货币交易所币安Binance完成了对以太坊移动钱包Trust Wallet的收购。">
+                            2017年全球交易量最大加密货币交易所币安Binance完成了对以太坊移动钱包Trust Wallet的收购。
+                        </div>
+
+                    </div>
+                    <div class="message-list">
+                        <h3 i18n i18n-html="下载Trust钱包：">
+                            下载Trust钱包：
+                        </h3>
+                        <div class="message-text">
+                            <i i18n i18n-html="1、在手机浏览器打开Trust钱包官网：">
+                                1、在手机浏览器打开Trust钱包官网：
+                            </i>
+                            https://trustwalletapp.com/
+                            <i i18n i18n-html="选择Android版本下载安装好，并按提示创建钱包。">
+                                选择Android版本下载安装好，并按提示创建钱包。
+                            </i>
+                        </div>
+                        <div class="message-text" i18n i18n-html="2、下载“百度手机助手”在百度手机助手输入“Trust”搜索下载。">
+                            2、下载“百度手机助手”在百度手机助手输入“Trust”搜索下载。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--常见问题-->
+    <div class="page-item" id="page5" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="常见问题">常见问题</div>
+        </header>
+        <section class="container contract">
+            <div class="clr"></div>
+            <div class="article">
+                <h3 class="article-title title-center" i18n i18n-html="常见问题">常见问题</h3>
+                <div class="article-content">
+                    <h3 i18n i18n-html="1、以太节点联盟是什么？">
+                        1、以太节点联盟是什么？
+                    </h3>
+                    <p i18n i18n-html="以太节点联盟是由一群来自全球深网极客、以太坊验证节点和ATOM原技术团队强强联合发起，采用最新多线性映射和同态加密防护技术，把币圈和矿圈联系到一起，并建立在公平公开的全球第一公链以太坊之上，形成的完全去中心化一个自治组织。">
+                        以太节点联盟是由一群来自全球深网极客、以太坊验证节点和ATOM原技术团队强强联合发起，采用最新多线性映射和同态加密防护技术，把币圈和矿圈联系到一起，并建立在公平公开的全球第一公链以太坊之上，形成的完全去中心化一个自治组织。
+                    </p>
+                    <h3 i18n i18n-html="2、以太节点联盟能长久运作吗？">
+                        2、以太节点联盟能长久运作吗？
+                    </h3>
+                    <p i18n i18n-html="是的，以太节点联盟不是盘子，也不是一个项目，它是基于以太坊的应用工具，自动运行质押挖矿、发行币、自带激烈机制、封存在区块上、全部链上运行、前端和后端代码100%开源、数据真实可查、没有后门程序。由于无需升级维护，无法篡改，模式和制度永远不会改变。同时采用多线性映射和同态加密技术，防止黑客攻击，保证在以太坊智能合约中永续运作。">
+                        是的，以太节点联盟不是盘子，也不是一个项目，它是基于以太坊的应用工具，自动运行质押挖矿、发行币、自带激烈机制、封存在区块上、全部链上运行、前端和后端代码100%开源、数据真实可查、没有后门程序。由于无需升级维护，无法篡改，模式和制度永远不会改变。同时采用多线性映射和同态加密技术，防止黑客攻击，保证在以太坊智能合约中永续运作。
+                    </p>
+                    <h3 i18n i18n-html="3、技术强大吗？">
+                        3、技术强大吗？
+                    </h3>
+                    <p i18n i18n-html="很强大。因为它的技术在以太坊公链上不需升级，链上永续运行，由智能合约自动执行！采用最新多线性映射和同态加密技术ETH质押和结算进行安全防护；">
+                        很强大。因为它的技术在以太坊公链上不需升级，链上永续运行，由智能合约自动执行！采用最新多线性映射和同态加密技术ETH质押和结算进行安全防护；
+                    </p>
+                    <h3 i18n i18n-html="4、质押挖矿的资金如何保证安全？">
+                        4、质押挖矿的资金如何保证安全？
+                    </h3>
+                    <p i18n i18n-html="非常安全。因为没有人能私自动用资金！质押账户为Contract合约地址，真正的Defi合约地址，不可篡改，没有私钥，没有助记词，任何人不能篡改和盗用资产，只能通过合约执行，并封装在以太坊底层的区块合约地址里进行加密，以及对奖金高频复杂算法的加密传送，避免黑客对结算系统的账户攻击。">
+                        非常安全。因为没有人能私自动用资金！质押账户为Contract合约地址，真正的Defi合约地址，不可篡改，没有私钥，没有助记词，任何人不能篡改和盗用资产，只能通过合约执行，并封装在以太坊底层的区块合约地址里进行加密，以及对奖金高频复杂算法的加密传送，避免黑客对结算系统的账户攻击。
+                    </p>
+                    <h3 i18n i18n-html="5、提现会出现不到账吗？">
+                        5、提现会出现不到账吗？
+                    </h3>
+                    <p i18n i18n-html="在去中心化的IMtoken和Trust钱包上操作提现！秒提秒到。首创实现空中指令提现，无需登录以太坊节点联盟平台，也可以秒提！">
+                        在去中心化的IMtoken和Trust钱包上操作提现！秒提秒到。首创实现空中指令提现，无需登录以太坊节点联盟平台，也可以秒提！
+                    </p>
+                    <h3 i18n i18n-html="6、什么是质押者？">
+                        6、什么是质押者？
+                    </h3>
+                    <p i18n i18n-html="质押者是那些未运行验证节点的ETH持有者，质押者将ETH在以太节点联盟DApp上委托给验证节点进行质押挖矿并获得委托收益。">
+                        质押者是那些未运行验证节点的ETH持有者，质押者将ETH在以太节点联盟DApp上委托给验证节点进行质押挖矿并获得委托收益。
+                    </p>
+                    <h3 i18n i18n-html="7、什么是验证节点？">
+                        7、什么是验证节点？
+                    </h3>
+                    <p i18n i18n-html="以太节点联盟的验证节点角色类似以太坊矿工，首先要质押32个ETH给以太坊2.0主网（目前质押在Topaz上）成为验证者，并有技术团队运行以太坊全节点网络进行PoS挖矿，维护以太坊网络的正常运行。以太坊验证节点在区块链网络中产生新的区块并获得出块收益，同时也必须对以太坊社区治理提案进行各种事务投票。">
+                        以太节点联盟的验证节点角色类似以太坊矿工，首先要质押32个ETH给以太坊2.0主网（目前质押在Topaz上）成为验证者，并有技术团队运行以太坊全节点网络进行PoS挖矿，维护以太坊网络的正常运行。以太坊验证节点在区块链网络中产生新的区块并获得出块收益，同时也必须对以太坊社区治理提案进行各种事务投票。
+                    </p>
+                    <h3 i18n i18n-html="8、质押者质押ETH有哪些收益？">
+                        8、质押者质押ETH有哪些收益？
+                    </h3>
+                    <p i18n i18n-html="（1）利息收益：以太坊验证节点通过质押者的增加，POS挖矿产生的收益增加，从而分配给质押者更多的收益；">
+                        （1）利息收益：以太坊验证节点通过质押者的增加，POS挖矿产生的收益增加，从而分配给质押者更多的收益；
+                    </p>
+                    <p i18n i18n-html="（2）增长收益：所有质押者必须购买通令GME进场，导致GME加速流通；入场所需的通令和提现手续费所需的通令进入销毁机制，导致GME 数量递减，变得流通量越来越少，从而导致GME价格就越来越高；">
+                        （2）增长收益：所有质押者必须购买通令GME进场，导致GME加速流通；入场所需的通令和提现手续费所需的通令进入销毁机制，导致GME 数量递减，变得流通量越来越少，从而导致GME价格就越来越高；
+                    </p>
+                    <p i18n i18n-html="（3）GME在去中心化金融DeFi的生态中广泛应用流通而产生升值。">
+                        （3）GME在去中心化金融DeFi的生态中广泛应用流通而产生升值。
+                    </p>
+                    <h3 i18n i18n-html="9、质押何时生效，质押后多久开始获得收益？">
+                        9、质押何时生效，质押后多久开始获得收益？
+                    </h3>
+                    <p i18n i18n-html="质押实时生效，生效后24小时开始获得委托质押挖矿收益。">
+                        质押实时生效，生效后24小时开始获得委托质押挖矿收益。
+                    </p>
+                    <h3 i18n i18n-html="10、ETH提现一般什么时候到账？">
+                        10、ETH提现一般什么时候到账？
+                    </h3>
+                    <p i18n i18n-html="在未结算收益区域点击结算，转入可提现收益区域后，即可秒提到钱包">
+                        在未结算收益区域点击结算，转入可提现收益区域后，即可秒提到钱包
+                    </p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    <!--兑换-->
+    <div class="page-item" id="page6" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="购买通令">购买通令</div>
+            <div class="header-btn position-right">
+                <a href="javascript:showPage(7);" i18n i18n-html="记录">记录</a>
+            </div>
+        </header>
+        <section class="container no-bottom">
+            <div class="purchase">
+                <div class="balance-data">
+                    <ul>
+                        <li>
+                            <span i18n i18n-html="全球总流通量(GME)">全球总流通量(GME)</span>
+                            <h3 class="data-contractState7_8_20_21_22_v1">--</h3>
+                        </li>
+                        <li style="display:none">
+                            <span i18n i18n-html="节点期抢购总量(GME)">节点期抢购总量(GME)</span>
+                            <h3>30000000</h3>
+                        </li>
+                        <li>
+                            <span i18n i18n-html="全球消耗总量(GME)">全球消耗总量(GME)</span>
+                            <h3 class="data-contractState8_41">--</h3>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-text">
+                    <label class="form-label" i18n i18n-html="购买数量">购买数量</label>
+                    <div class="form-control">
+                        <input type="text" class="text-input buyTicketAmount" placeholder="请输入购买数量" i18n i18n-placeholder="请输入购买数量" autocomplete="off" onkeyup="this.value=this.value.replace(/[^0-9.]+/,'');" maxlength="18">
+                        <div class="number-form-tag">
+                            <i>ETH</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-text">
+                    <label class="form-label" i18n i18n-html="可得通令">可得通令</label>
+                    <div class="form-control">
+                        <input type="text" class="text-input data-buyTicketAmount-Ticket" placeholder="可得通令" i18n i18n-placeholder="可得通令" readonly>
+                        <div class="number-form-tag">
+                            <i>GME</i>
+                        </div>
+                    </div>
+
+                </div>
+                <p class="purchase-p">
+                    <i i18n i18n-html="当前价格">当前价格</i>：
+                    <i class="data-showethWei">1</i>ETH = <i class="data-contractState4">--</i>GME
+                </p>
+
+                <div class="form-submit">
+                    <button type="submit" class="form-submit-btn" onclick="buyTicket()" i18n i18n-html="确认购买">确认购买</button>
+                </div>
+                <div class="message-list">
+                    <div class="article">
+                        <h3 class="article-title title-center" i18n i18n-html="通令GME说明">通令GME说明</h3>
+                        <div class="article-content">
+                            <p i18n i18n-html="1、代币名称：GME（Gold Mine of Ethereum）中文名：以太金矿；">1、代币名称：GME（Gold Mine of Ethereum）中文名：以太金矿；</p>
+                            <p i18n i18n-html="2、代币双链名称：GMEE；">2、代币双链名称：GMEE；</p>
+                            <p i18n i18n-html="3、定量发行：总量1.6亿枚，智能合约销毁机制；">3、定量发行：总量1.6亿枚，智能合约销毁机制；</p>
+                            <p i18n i18n-html="4、发行通令GME所得ETH全部进入以太节点联盟合约地址；">4、发行通令GME所得ETH全部进入以太节点联盟合约地址；</p>
+                            <p i18n i18n-html="5、参与质押挖矿需要相应的GME方可参与，参与质押挖矿需销毁质押额10%当前价值的通令GME；">5、参与质押挖矿需要相应的GME方可参与，参与质押挖矿需销毁质押额10%当前价值的通令GME；</p>
+                            <p i18n i18n-html="6、参与质押挖矿需要相应的通令，初始1个ETH兑换10000枚通令，GME每被兑换500万枚，智能合约自动执行兑换递减10%的GME,即：1ETH兑换9000枚GME、、8000枚、7000枚、6000枚、5000枚结束第一阶段兑换递减，即进入正式上线，GME每被兑换20万枚，兑换递减10%的GME，直到1ETH兑换10枚GME，不再递减；">6、参与质押挖矿需要相应的通令，初始1个ETH兑换10000枚通令，GME每被兑换500万枚，智能合约自动执行兑换递减10%的GME,即：1ETH兑换9000枚GME、、8000枚、7000枚、6000枚、5000枚结束第一阶段兑换递减，即进入正式上线，GME每被兑换20万枚，兑换递减10%的GME，直到1ETH兑换10枚GME，不再递减；</p>
+                            <p i18n i18n-html="7、参与质押挖矿的通令自动销毁，直到剩下3000万枚时，通令不再进行销毁。指定兑振为10枚GME时，启动进入国际主流交易所进行交易，也可点对点自由进行交易；"> 7、参与质押挖矿的通令自动销毁，直到剩下3000万枚时，通令不再进行销毁。指定兑振为10枚GME时，启动进入国际主流交易所进行交易，也可点对点自由进行交易；</p>
+                            <p i18n i18n-html="8、全球所有参与质押挖矿用户都需支付相应比例的通令；">8、全球所有参与质押挖矿用户都需支付相应比例的通令；</p>
+                            <p i18n i18n-html="9、以太节点联盟是一个独立的DApp，GME与ETH智能合约联动，按照智能合约兑振，等量递减发行。GME存储在每位参与者的私人钱包地址，可以实现点对点的自由交易，极大地丰富和繁荣ETH2.0质押挖矿生态；">
+                                9、以太节点联盟是一个独立的DApp，GME与ETH智能合约联动，按照智能合约兑振，等量递减发行。GME存储在每位参与者的私人钱包地址，可以实现点对点的自由交易，极大地丰富和繁荣ETH2.0质押挖矿生态；
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--兑换记录-->
+    <div class="page-item" id="page7" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(6);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="参与记录">参与记录</div>
+        </header>
+
+        <section class="container no-bottom participation">
+
+            <div class="bill-list">
+                <ul class="data-buyTicketRecords">
+                    <p class="home-p" i18n i18n-html="正在加载记录...">正在加载记录...</p>
+                </ul>
+            </div>
+
+        </section>
+    </div>
+    <!--购买记录-->
+    <div class="page-item" id="page8" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="购买记录">购买记录</div>
+        </header>
+        <section class="container">
+            <p class="home-p" style="color:red" i18n i18n-html="温馨提示：所有赠送的激活码必须在正式启动质押挖矿即上线前使用，过期无效">温馨提示：所有赠送的激活码必须在正式启动质押挖矿即上线前使用，过期无效</p>
+            <div class="trend-list data-activationCodeRecords">
+                <p class="home-p" i18n i18n-html="正在加载记录...">正在加载记录...</p>
+            </div>
+            <div class="add-btn-bottom">
+                <button type="button" class="copyData copyData-activationCodeAll" data-title="所有激活码" data-value="" i18n i18n-html="一键复制">一键复制</button>
+            </div>
+        </section>
+    </div>
+
+    <!--投资-->
+    <div class="page-item" id="page9" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(0);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="质押投资">质押投资</div>
+            <div class="header-btn position-right">
+                <a href="javascript:showInvestRecord(9);" i18n i18n-html="记录">记录</a>
+            </div>
+        </header>
+        <section class="container no-bottom">
+            <div class="purchase">
+                <div class="form-text">
+                    <label class="form-label" i18n i18n-html="投资数量">投资数量</label>
+                    <div class="form-control">
+                        <input type="text" class="text-input investAmount" placeholder="请输入投资数量" i18n i18n-placeholder="请输入投资数量" autocomplete="off" onkeyup="this.value=this.value.replace(/[^0-9.]+/,'');" maxlength="18">
+                        <div class="number-form-tag">
+                            <i>ETH</i>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-submit">
+                    <button type="submit" class="form-submit-btn" onclick="invest_1()" i18n i18n-html="确认投资">确认投资</button>
+                </div>
+                <div class="message-list">
+                    <div class="article">
+                        <h3 class="article-title title-center" i18n i18n-html="投资说明">投资说明</h3>
+                        <div class="article-content">
+                            <p i18n i18n-html="1、一个账号在出局前仅接受一笔质押挖矿投资，仅能参与初级节点和中级节点，出局后可继续投资其他节点和复投；">1、一个账号在出局前仅接受一笔质押挖矿投资，仅能参与初级节点和中级节点，出局后可继续投资其他节点和复投；</p>
+                            <p i18n i18n-html="2、静态挖矿收益按照每天0.3%~2%上下浮动；">2、静态挖矿收益按照每天0.3%~2%上下浮动；</p>
+                            <p i18n i18n-html="3、动静出局，按照1-30ETH为投资额的3倍，30ETH以上为投资额3.5倍；">3、动静出局，按照1-30ETH为投资额的3倍，30ETH以上为投资额3.5倍；</p>
+                            <p i18n i18n-html="4、动态按照推荐几个有效用户对应拿几代获取动态奖励，可即时提现；">4、动态按照推荐几个有效用户对应拿几代获取动态奖励，可即时提现；</p>
+                            <p i18n i18n-html="5、团队奖按照业绩考核达到相应指标，即获取团队奖，可即时提现；">5、团队奖按照业绩考核达到相应指标，即获取团队奖，可即时提现；</p>
+                            <p i18n i18n-html="6、精英奖达到指定100ETH后，奖池清零不再累计，从新开始下一轮；">6、精英奖达到指定100ETH后，奖池清零不再累计，从新开始下一轮；</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--投资记录-->
+    <div class="page-item" id="page10" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:backToPage();"></a>
+            </div>
+            <div class="logo" i18n i18n-html="投资记录">投资记录</div>
+        </header>
+        <section class="container no-bottom participation">
+            <div class="bill-list">
+                <ul class="data-investRecords">
+                    <p class="home-p" i18n i18n-html="正在加载记录...">正在加载记录...</p>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <!--签到记录-->
+    <div class="page-item" id="page11" style="display:none">
+        <header class="header header-box">
+            <div class="header-return">
+                <a href="javascript:showPage(1);"></a>
+            </div>
+            <div class="logo" i18n i18n-html="签到记录">签到记录</div>
+        </header>
+        <section class="container no-bottom participation">
+            <div class="bill-list">
+                <ul class="data-signInRecords">
+                    <p class="home-p" i18n i18n-html="正在加载记录...">正在加载记录...</p>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!--提示信息弹窗-->
+    <div id="msgtips2" class="popup tips-popup" style="display:none;">
+        <div class="popup-box">
+            <div class="popup-box-title" id="msgtips2-title" i18n i18n-html="提示">
+                提示
+            </div>
+            <div class="popup-box-content">
+                <div class="popup-box-text">
+                    <p id="msgtips2-msg">消息</p>
+                </div>
+            </div>
+            <div class="popup-submit">
+                <button class="cancle-btn" i18n i18n-html="确认">确认</button>
+            </div>
+        </div>
+        <div class="popup-bg"></div>
+    </div>
+    <!--签到图标-->
+    <div id="popWidthText" class="popup">
+        <div class="choose-group-panel" style="left: 41.5px; top: 243.16px;background: none;">
+            <div class="choose-group-close"></div>
+
+            <div class="join-group-member" style="width: auto;">
+                <div class="group-member-photo fl">
+                    <img style="width:120%;" src="./Theme/DApp/img/cj.png" />
+                </div>
+            </div>
+
+            <div id="joinGroupBtn" class="join-group-btn collection">
+                <span>10.00GME</span>
+            </div>
+        </div>
+
+        <div class="popup-bg"></div>
+    </div>
+    <!--推荐码填写-->
+    <div id="Recommendation" class="popup tips-popup Recommendation" style="display:none;">
+        <div class="popup-box">
+            <div class="popup-box-title text-left" i18n i18n-html="投资">
+                投资
+            </div>
+            <div class="popup-box-content data-Recommendation-1">
+                <div class="popup-box-text">
+                    <label class="form-label" i18n i18n-html="推荐码" style="display:none">推荐码</label>
+                    <input type="text" class="invitors data-RCode" maxlength="8" autocomplete="off" placeholder="请输入推荐码" i18n i18n-placeholder="请输入推荐码">
+                </div>
+            </div>
+            <!--<div class="smallTil">
+                Default is <span class="data-defaultRCode" style="display:none"></span>
+            </div>-->
+            <div class="popup-submit">
+                <button class="confirm-btn width100 Recommendation-close" onclick="invest_2()" i18n i18n-html="确认">确认</button>
+            </div>
+        </div>
+        <div class="popup-bg"></div>
+    </div>
+    <!--获取资金账户授权提示-->
+    <div id="TokenApproveLoad" class="popup home-tips" style="display:none">
+        <div class="popup-box">
+            <div class="popup-box-title text-left" i18n i18n-html="提示">
+                提示
+            </div>
+            <div class="popup-box-content">
+                <div class="popup-box-text">
+                    <div class="loader">
+                        <div class="loading-3">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                    </div>
+                    <p i18n i18n-html="正在获取资金账户授权...">正在获取资金账户授权...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--处理交易提示提示-->
+    <div id="TransactionProcessing" class="popup home-tips" style="display:none">
+        <div class="popup-box">
+            <div class="popup-box-title text-left" i18n i18n-html="提示">
+                提示
+            </div>
+            <div class="popup-box-content">
+                <div class="popup-box-text">
+                    <div class="loader">
+                        <div class="loading-3">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+                    </div>
+                    <p i18n i18n-html="正在处理交易...">正在处理交易...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="//cdn.jsdelivr.net/npm/jquery@3.1.1/dist/jquery.min.js"></script>
+
+<script>
+    $(function () {
+        $('.language-button').click(function () {
+            $('.choose-lang').fadeIn();
+        });
+
+        $('.choose-lang').click(function () {
+            $(this).fadeOut();
+        });
+
+
+        $('.switch-button').click(function () {
+            $('.choose-switch').fadeIn();
+        });
+
+        $('.choose-switch').click(function () {
+            $(this).fadeOut();
+        });
+    });
+    function showPage(index) {
+        $('.page-item').hide()
+        $('#page' + index).show()
+    }
+    function gourl(onthis) {
+        _gourl = $(onthis).data('gourl')
+        if (_gourl) {
+            location.href = _gourl
+        }
+    }
+    var toInestRecordsPageFrom = 0;
+    function showInvestRecord(f_index) {
+        toInestRecordsPageFrom = f_index;
+        showPage(10);
+    }
+
+    function backToPage() {
+        showPage(toInestRecordsPageFrom);
+    }
+
+</script>
+
+<link href="./Plugin/layer/layui/css/layui.min.css" rel="stylesheet" /><!--layui样式-->
+<script src="//cdn.jsdelivr.net/npm/layui-src@2.2.5/dist/layui.js"></script>
+<script>
+    var layer;
+    var laytpl;
+    layui.use(['layer', 'laytpl'], function () {
+        layer = layui.layer;
+        laytpl = layui.laytpl;
+    });
+    //全局通用消息接口
+    function msgtips(msg, type, callback) {
+        if (type)
+            layer.msg(msg, { icon: type })
+        else
+            layer.msg(msg)
+        if (typeof callback === "function") {
+            setTimeout(function () {
+                callback();
+            }, 1000)
+        }
+    }
+
+    //全局通用消息接口2
+    function msgtips2(msg, title) {
+        $msgtips2 = $('#msgtips2')
+        title && $msgtips2.find('#msgtips2-title').html(title)
+        msg && $msgtips2.find('#msgtips2-msg').html(msg)
+        showpop('#msgtips2')
+    }
+
+    function msgtips3(msg, title) {
+        $msgtips2 = $('#msgtips2')
+        title && $msgtips2.find('#msgtips2-title').html(title)
+        msg && $msgtips2.find('#msgtips2-msg').html(msg.toTranslateArr())
+        showpop('#msgtips2')
+    }
+</script>
+
+<script>
+    //弹框
+    function showpop(id) {
+        $(id).fadeIn();
+        $('body').addClass('open-layer');
+
+        var h = ($(window).height() - $(id).children('.popup-box').height()) / 2;
+        $(id).children('.popup-box').css('top', h);
+    }
+    $('.cancle-btn').click(function () {
+        $('.popup').fadeOut();
+        $('body').removeClass('open-layer');
+    });
+    $('.popup-box-close').click(function () {
+        $('.popup').fadeOut();
+        $('body').removeClass('open-layer');
+    });
+    $('.popup-bg').click(function () {
+        $('.popup').fadeOut();
+        $('body').removeClass('open-layer');
+    });
+    $('.Recommendation-close').click(function () {
+        $('#Recommendation').fadeOut();
+    });
+
+    //tab
+    $(function () {
+        //选项卡
+        $(".tab-title li").click(function () {
+
+            var _index = $(this).index();
+
+            $(this).parents('.tab-title').siblings().find(".tab-box").eq(_index).fadeIn().siblings().hide();
+            $(this).addClass("active").siblings().removeClass("active");
+        });
+    });
+</script>
+
+<script>
+    var validateNaN = function (num) {
+        if (isNaN(BigNumber(num))) {
+            return "0";
+        } else return num;
+    }
+    //加减投注
+    function ChangeCalculateInput(onthis) {
+        var $onthis = $(onthis)
+        var inputObj = $onthis.data("change").toString()
+        var baseVal = $onthis.data("base").toString()
+        var direction = $onthis.data("direction").toString()
+        var limit = $onthis.data("limit").toString()
+        //direction -1 减 ,0 设置为baseVal, 1 加
+        //limit  不能小于或大于
+        var changeValue = validateNaN($(inputObj).val());
+        baseVal = validateNaN(baseVal);
+        limit = validateNaN(limit);
+        switch (direction) {
+            case "-1":
+                changeValue = changeValue.sub(baseVal)
+                if (changeValue < limit) {
+                    changeValue = limit;
+                }
+                break;
+            case "0":
+                changeValue = baseVal
+                break;
+            case "1":
+                changeValue = changeValue.add(baseVal)
+                if (changeValue > limit) {
+                    changeValue = limit;
+                }
+                break;
+            default:
+        }
+        $(inputObj).val(changeValue).change()
+    }
+
+    //调整合约投资精度
+    function modulationdisplay_showethWei() {
+        var dataethWeiList = $(".data-dataethWei")
+        for (var i = 0; i < dataethWeiList.length; i++) {
+            var $item = $(dataethWeiList[i]);
+            var baseVal = $item.data("base").toString()
+            if (baseVal) {
+                baseVal = validateNaN(baseVal).mul(_ethWeiShow);
+                $item.data("base", baseVal)
+            }
+
+            var limit = $item.data("limit").toString()
+            if (limit) {
+                limit = validateNaN(limit).mul(_ethWeiShow);
+                $item.data("limit", limit)
+            }
+        }
+        var showethWeiList = $(".data-showethWei")
+        for (var i = 0; i < showethWeiList.length; i++) {
+            var $item = $(showethWeiList[i]);
+            var showval = $item.html().toString()
+            if (true) {
+                showval = validateNaN(showval).mul(_ethWeiShow);
+                $item.html(showval)
+            }
+        }
+
+        var valueethWeiList = $(".data-valueethWei")
+        for (var i = 0; i < valueethWeiList.length; i++) {
+            var $item = $(valueethWeiList[i]);
+            var inputval = $item.val().toString()
+            if (true) {
+                inputval = validateNaN(inputval).mul(_ethWeiShow);
+                $item.val(inputval)
+            }
+        }
+    }
+
+    //输入联动
+    $(function () {
+        //购买门票获得计算
+        $('.buyTicketAmount').change(function () {
+            buyTicket_calculate()
+        })
+        $('.buyTicketAmount').keyup(function () {
+            buyTicket_calculate()
+        })
+    })
+    function buyTicket_calculate() {
+        var buyTicketAmount = $('.buyTicketAmount').val() || '0'
+        var ratio = _DappContractPlugin.paramRatio || '0'
+        var investmentTicket = buyTicketAmount.mul(ratio)
+        $('.data-buyTicketAmount-Ticket').val(Number(investmentTicket) > 0 ? investmentTicket : '')
+    }
+</script>
+
+<script src="//cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+<script type="text/javascript">
+    //复制相关
+    $(function () {
+        var $copyDataArr = $('.copyData');
+        for (var i = 0; i < $copyDataArr.length; i++) {
+            band_Clipboard($copyDataArr[i])
+        }
+    });
+    function band_Clipboard(cobj) {
+        var clipboard = new ClipboardJS(cobj, {
+            text: function (e) {
+                return $(e).data('value');
+            }
+        });
+        clipboard.on('success', function (e) {
+            console.log(e);
+            msgtips($(e.trigger).data('title').toTranslate() + '已复制到剪切板'.toTranslate());
+        });
+
+        clipboard.on('error', function (e) {
+            console.log(e);
+            msgtips("复制失败".toTranslate());
+        });
+    }
+</script>
+
+<!-- Dapp JS -->
+<script src="./Plugin/Dapp/MathRepairV4.js?v=1.0.2"></script>
+<script src="./Plugin/Dapp/DappBase.Plugin.js?v=1.1.9"></script>
+<script src="./Plugin/Dapp/DappContract.Plugin.js?v=1.1.9"></script>
+<script src="./Scripts/DateFormat.js"></script>
+<script>
+    $.extend({
+        loadScript: function (url, cb, options) {
+            // allow user to set any option except for dataType, cache, and url
+            options = $.extend({}, {
+                dataType: "script",
+                cache: true,
+                url: url
+            }, options);
+
+            // Use $.ajax() since it is more flexible than $.getScript
+            // Return the jqXHR object so we can chain callbacks
+            return $.ajax(options).done(function (script, textStatus) {
+                typeof cb === "function" && cb(script, textStatus)
+            });
+        }
+    });
+
+    //处理火币加载注入web3问题
+    function loadScript(url, cb, options) {
+        $.loadScript(url, function () {
+            typeof cb === "function" && cb()
+        }, options);
+    }
+    $(function () {
+        loadScript('//cdn.jsdelivr.net/npm/web3@1.2.6/dist/web3.min.js', function () {
+            loadScript('./Plugin/Dapp/main.js?v=2.1.43', function () {
+                //调整合约投资精度
+                modulationdisplay_showethWei()
+            }, {
+                //cache: false,
+            })
+        })
+    })
+</script>
+<script>
+    //显示信息处理
+    function HandleShowContractUserInfo_Text() {
+        //团队等级-V2.0版本
+        var teamLevel = $('.data-contractUserInfo4').data("value");
+        var teamLevelShow = "--"
+        switch (teamLevel) {
+            case "0":
+                teamLevelShow = "VIP0"
+                break;
+            case "1":
+                teamLevelShow = "VIP1"
+                break;
+            case "2":
+                teamLevelShow = "VIP2"
+                break;
+            case "3":
+                teamLevelShow = "VIP3"
+                break;
+            case "4":
+                teamLevelShow = "VIP4"
+                break;
+        }
+        $('.data-contractUserInfo4').html(teamLevelShow)
+
+        //显示等级-延V1.0版本
+        var level = $('.data-contractUserInfo2').data("value");
+        console.log(level);
+        var levelShow = "--"
+        switch (level) {
+            case "0":
+                levelShow = "VIP0"
+                break;
+            case "1":
+                levelShow = "VIP1"
+                break;
+            case "2":
+                levelShow = "VIP2"
+                break;
+            case "3":
+                levelShow = "VIP3"
+                break;
+        }
+        $('.data-contractUserInfo2').html(levelShow)
+
+        //当前等级
+        var currentLevel = $('.data-contractUserInfo17').data("value");
+        var currentLevelShow = "--"
+        switch (currentLevel) {
+            case "0":
+                currentLevelShow = "VIP0"
+                break;
+            case "1":
+                currentLevelShow = "VIP1"
+                break;
+            case "2":
+                currentLevelShow = "VIP2"
+                break;
+            case "3":
+                currentLevelShow = "VIP3"
+                break;
+            case "4":
+                currentLevelShow = "VIP4"
+                break;
+        }
+        $('.data-contractUserInfo17').html(currentLevelShow)
+    }
+
+    function HandleShowContractUserInfo_Text2() {
+
+        //质押投资等级
+        var investLevel = $('.data-contractUserInfo-Invest-Level').data("value");
+        var investStatus = $('.data-contractUserInfo-Invest-Level').data("status");
+        var investLevelShow = "--"
+        switch (investLevel) {
+            case "0":
+                investLevelShow = "未投资".toTranslate();
+                break;
+            case "1":
+                investLevelShow = "初级节点".toTranslate();
+                break;
+            case "2":
+                investLevelShow = "中级节点".toTranslate();
+                break;
+            case "3":
+                investLevelShow = "高级节点".toTranslate();
+                break;
+            case "4":
+                investLevelShow = "超级节点".toTranslate();
+                break;
+            case "5":
+                investLevelShow = "顶级节点".toTranslate();
+                break;
+        }
+        $('.data-contractUserInfo-Invest-Level').html(investLevelShow);
+
+        //处理投资参与方式
+        handle_investLevelShow(investLevel, investStatus)
+
+        function handle_investLevelShow(_investLevel, _investStatus) {
+            $('.nodelevel').hide();
+            $('.nodelevel-no').hide();
+            $('.nodelevel-act').hide();
+            if (Number(_investLevel) == 0) {
+                //首次投资只能投1、2级
+                $('.nodelevel-1').show();
+                $('.nodelevel-2').show();
+                $('.nodelevel-no').show();
+            }
+            else if (Number(_investLevel) > 0 && Number(_investStatus) == 0) {
+                //隐藏投资，转到记录
+                $('.nodelevel-' + _investLevel).show();
+                $('.nodelevel-act').show();
+            }
+            else {
+                $('.nodelevel').show()
+                $('.nodelevel-no').show()
+            }
+        }
+    }
+
+    HandleShowContractUserInfo = function () {
+        HandleShowContractUserInfo_Text()
+
+        //显示邀请码
+        showInvitationlLink()
+
+        //计算门票购买比例
+        buyTicket_calculate()
+
+        //处理投资列表
+        loadList()
+    }
+    HandleShowContractUserInfo2 = function () {
+        HandleShowContractUserInfo_Text2()
+    }
+    //提示账户资金授权
+    HandleShowTokenApproveLoad = function (show) {
+        if (show) {
+            $('#TokenApproveLoad').show()
+        } else {
+            $('#TokenApproveLoad').hide()
+        }
+    }
+    //提示交易处理
+    HandleShowTransactionProcessingLoad = function (show) {
+        if (show) {
+            $('#TransactionProcessing').show()
+        } else {
+            $('#TransactionProcessing').hide()
+        }
+    }
+
+    //刷新触发事件
+    HandleShowChangeLoad = function () {
+        timeCalmerClear();
+    }
+    //刷新触发事件
+    HandleShowContractInfo = function () {
+        //倒计时
+        var lastRwTime = $('.data-contractState18').data("value")
+        if (Number(lastRwTime) > 0) {
+            timeCalmer(Number(lastRwTime), '.data-contractState18', "00:00:00")
+        } else {
+            timeCalmer(0, '.data-contractState18', "--")
+        }
+    }
+</script>
+<script>
+    //倒计时
+    var timestamptimer = null;
+
+    function timeCalmerClear() {
+        timestamptimer && clearInterval(timestamptimer);
+    }
+
+    function timeCalmer(timestamp, ddiv, endmsg) {
+        timestamptimer && clearInterval(timestamptimer);
+        if (timestamp == 0) return;
+        var timestamp = Math.floor((timestamp - new Date().getTime() / 1000));
+        console.log(timestamp);
+        if (timestamp < 0) {
+            timestamp = 3600 * 72 - 10;
+        }
+        if (timestamp > 0) {
+            timestamp = timestamp + 10;
+            timestamptimer = setInterval(function () {
+                timestamp--;
+                var talltiemstip = secTotimeH(timestamp);
+                $(ddiv).html(talltiemstip)
+                if (timestamp <= 0) {
+                    //到时处理业务（刷新页面或数据）
+                    timestamptimer && clearInterval(timestamptimer);
+                    //setTimeout(function () {
+                    //    timeCalmer(-1, ddiv, endmsg)
+                    //}, 30 * 1000)
+                }
+            }, 1000);
+        } else {
+            //到时处理业务（刷新页面或数据
+            //window.location.reload();
+            $(ddiv).html(endmsg)
+            //timeCalmer(-1, ddiv, endmsg)
+        }
+    }
+
+    function secTotimeH(s) {
+        var t;
+        if (s > -1) {
+            var hour = Math.floor(s / 3600);
+            var min = Math.floor(s / 60) % 60;
+            var sec = s % 60;
+            if (hour > 0) {
+                if (hour < 10) {
+                    t = '0' + hour + ":"
+                } else {
+                    t = hour + ":"
+                }
+            } else {
+                t = '';
+            }
+            if (min < 10) {
+                t += "0";
+            }
+            t += min + ":"
+            if (sec < 10) {
+                t += "0";
+            }
+            t += sec
+        }
+        return t;
+    }
+</script>
+<script src="./Plugin/i18n/jquery.i18n.js"></script>
+<script>
+    //i18n
+    $(function () {
+        layui.use(['laytpl'], function () {
+            laytpl = layui.laytpl;
+
+            $.i18n({
+                list: "list",//filePath+filePrefix+list+fileSuffix+.json
+                defaultLang: "zh-CN",//defaultLang
+                lang: "",//filePath+filePrefix+lang+fileSuffix+.json
+                filePath: "./Plugin/i18n/json/",//filePath+filePrefix+lang+fileSuffix+.json
+                filePrefix: "i18n_",//filePath+filePrefix+lang+fileSuffix+.json
+                fileSuffix: "",//filePath+filePrefix+lang+fileSuffix+.json
+                callback: function (arr) {
+                    var lis = [];
+                    layui.each(arr, function (index, item) {
+                        laytpl($("#data_lang_templet").html()).render(item, function (html) {
+                            lis.push(html);
+                        });
+                    });
+                    $('.data-language-i18n').html(lis.join(''))
+
+                    //刷新翻译
+                    HandleShowContractUserInfo_Text()
+                    HandleShowContractUserInfo_Text2()
+                },//inin return lang list
+            }, function (lang) {
+                //刷新翻译
+                Handle_i18n(lang)
+            });
+        });
+    })
+</script>
+<script type="text/html" id="data_lang_templet">
+    <div class="choose-lang-btn" onclick="langChange(this)" data-lang="{{d.Value2}}">
+        <i class="language-{{d.Value2}}"></i>
+    </div>
+</script>
+<script type="text/javascript">
+    //语言切换
+    function langChange(onthis) {
+        var lang = $(onthis).data('lang')
+        var onlang = $.i18n_getCurrentLanguage()
+        if (onlang == lang) return;
+        $.i18n_setLanguage(lang, function () {
+            //刷新翻译
+            HandleShowContractUserInfo_Text()
+            HandleShowContractUserInfo_Text2()
+            Handle_i18n(lang)
+        })
+    }
+    function Handle_i18n(lang) {
+        layui.use(['laytpl'], function () {
+            laytpl = layui.laytpl;
+
+            $("[i18n]").i18n(function (strtemplet, i18nLang, formtCB, setCB) {
+                if (strtemplet.indexOf("{" + "{") == -1) {
+                    setCB(formtCB(strtemplet));
+                } else {
+                    laytpl(strtemplet).render(i18nLang, function (html) {
+                        return setCB(html);
+                    });
+                }
+            });
+        });
+        $('.data-language-i18n-curr').find('i').removeClass().addClass('language-' + lang);
+    }
+</script>
+<script>
+    //翻译
+    var translateArr = {}
+    function addTranslateArr(key, value) {
+        translateArr[key] = value
+    }
+    String.prototype.toTranslateArr = function () {
+        var str = this;
+        for (var item in translateArr) {
+            if (str.indexOf(item) >= 0) {
+                str = str.replace(new RegExp(item, "g"), item.toTranslate_i18n())
+            }
+        }
+        return str
+    };
+    String.prototype.toTranslate = function () {
+        var str = this.toString().toTranslate_i18n();
+        return str.toString()
+    };
+
+    //加入数组
+    addTranslateArr("合约运行在", "合约运行在")
+    addTranslateArr("请切换为", "请切换为")
+    addTranslateArr("网络", "网络")
+    addTranslateArr("主网", "主网")
+    addTranslateArr("当前账户", "当前账户")
+    addTranslateArr("请输入金额", "请输入金额")
+    addTranslateArr("金额不正确", "金额不正确")
+    addTranslateArr("请输入邀请码", "请输入邀请码")
+    addTranslateArr("请输入推荐码", "请输入推荐码")
+    addTranslateArr("请输入推荐人地址", "请输入推荐人地址")
+    addTranslateArr("请输入正确的推荐码", "请输入正确的推荐码")
+    addTranslateArr("请输入激活码", "请输入激活码")
+    addTranslateArr("激活码不正确", "激活码不正确")
+</script>
+<script>
+    //购买门票
+    function buyTicket() {
+        var _buyTicketAmount = $('.buyTicketAmount').val();
+        if (!_buyTicketAmount) {
+            msgtips2("请输入金额".toTranslate())
+            return;
+        }
+        business_buyTicket(_buyTicketAmount, function (resulr, rdata) {
+            if (resulr) {
+                msgtips2("购买成功".toTranslate())
+                console.log(rdata)
+            } else {
+                if (rdata.code == 4001) {
+                    msgtips2("交易已取消".toTranslate())
+                } else {
+                    //alert(rdata.message || rdata)
+                    msgtips2("购买失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                }
+
+            }
+        })
+    }
+
+    //使用激活码
+    function useCode() {
+        var activationCode = $('.activationCode').val();
+        business_useCode(activationCode, function (resulr, rdata) {
+            if (resulr) {
+                msgtips2("操作成功".toTranslate())
+                console.log(rdata)
+            } else {
+                if (rdata.code == 4001) {
+                    msgtips2("交易已取消".toTranslate())
+                } else {
+                    //alert(rdata.message || rdata)
+                    msgtips2("操作失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                }
+
+            }
+        })
+    }
+</script>
+<script>
+    var investMinMoney;
+    var investMaxMoney;
+    //投资
+    function invest(code, rCode) {
+        var investAmount = $('.investAmount').val();
+        business_invest(investAmount, function (resulr, rdata) {
+            if (resulr) {
+                msgtips2("投资成功".toTranslate())
+                console.log(rdata)
+            } else {
+                if (rdata.code == 4001) {
+                    msgtips2("交易已取消".toTranslate())
+                } else {
+                    //alert(rdata.message || rdata)
+                    msgtips2("投资失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                }
+
+            }
+        }, code, rCode)
+    }
+    //投资1
+    function invest_1() {
+        var investAmount = $('.investAmount').val();
+        var rCode = $('.data-RCode').val();
+        if (!investAmount) {
+            msgtips2("请输入金额".toTranslate())
+            return;
+        }
+        if (Number(investAmount) < Number(investMinMoney)) {
+            msgtips2("当前等级投资金额最小为".toTranslate() + investMinMoney)
+            return;
+        }
+        if (Number(investAmount) >= Number(investMaxMoney)) {
+            msgtips2("当前等级投资金额不能大于或等于".toTranslate() + investMaxMoney)
+            return;
+        }
+
+        business_getCurrentAccountCode(function (code, isNweCode) {
+            console.log(code)
+            if (!isNweCode) {
+                $('.data-RCode').data("code", code)
+                $('.data-Recommendation-1').hide()
+                $('.data-defaultAccount-1').show()
+
+                //showpop('#Recommendation')
+
+                //直接进入投资确认
+                invest(code)
+            } else {
+                $('.data-Recommendation-1').show()
+                $('.data-defaultAccount-1').hide()
+
+                business_getRecommendCode(function (_rCode) {
+                    console.log(_rCode)
+                    $('.data-RCode').val(_rCode).data("code", code)
+
+                    var defaultRCode = business_getDefaultRecommendCode();
+                    if (defaultRCode) {
+                        $('.data-defaultRCode').html(defaultRCode).show();
+                    } else {
+                        $('.data-defaultRCode').hide();
+                    }
+                    showpop('#Recommendation')
+                });
+            }
+        })
+    }
+    //投资2
+    function invest_2() {
+        var code = $('.data-RCode').data("code");
+        var rCode = $('.data-RCode').val();
+        invest(code, rCode)
+    }
+
+    //投资3
+    function invest_3(stateMin, stateMax) {
+        Dapp_getContractState(function (resulr, rdata) {
+            if (resulr) {
+                investMinMoney = rdata[stateMin].div(_ethWei);
+                if (stateMin != stateMax) {
+                    investMaxMoney = rdata[stateMax].div(_ethWei);
+                }
+                else {
+                    investMaxMoney = investMinMoney;
+                }
+                showPage(9);
+            }
+        })
+    }
+
+    //签到
+    function signIn() {
+        business_SignIn(function (resulr, rdata) {
+            if (resulr) {
+                setTimeout(function () {
+                    afterSignInTip();
+                }, 2000);
+            } else {
+                if (rdata.code == 4001) {
+                    msgtips2("交易已取消".toTranslate())
+                } else {
+                    msgtips2("操作失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                }
+            }
+        });
+    }
+    //签到成功提示得到GME
+    function afterSignInTip() {
+        Dapp_getContractUserInfo(function (cresulr, crdata) {
+            if (cresulr) {
+                console.log(JSON.stringify(crdata));
+                business_SignInRecordByAddress(crdata[0][11].sub(1), function (result) {
+                    console.log(JSON.stringify(result));
+                    if (Number(result.Money) > 0) {
+                        HandleShowTransactionProcessingLoad && HandleShowTransactionProcessingLoad(false);
+                        var signGetMoney = result.Money.toFloor(2) + "GME";
+                        $("#joinGroupBtn span").html(signGetMoney);
+                        showpop("#popWidthText");
+                    }
+                    else {
+                        setTimeout(function () {
+                            afterSignInTip();
+                        }, 2000);
+                    }
+                });
+
+            }
+        });
+    }
+
+    //结算
+    function settlement() {
+        business_settlement(function (resulr, rdata) {
+            if (resulr) {
+                msgtips2("结算成功".toTranslate());
+                console.log(rdata);
+            } else {
+                if (rdata.code == 4001) {
+                    msgtips2("交易已取消".toTranslate())
+                } else {
+                    msgtips2("操作失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                }
+            }
+        });
+    }
+    //提现
+    function cashout() {
+        Dapp_takeAll(function (resulr, rdata) {
+            if (resulr) {
+                msgtips2("提现成功".toTranslate());
+                console.log(rdata);
+            } else {
+                if (rdata.code == 4001) {
+                    msgtips2("交易已取消".toTranslate())
+                } else {
+                    msgtips2("操作失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                }
+            }
+        });
+    }
+
+</script>
+<script>
+    //邀请码相关
+    //显示邀请链接
+    function showInvitationlLink() {
+        business_getCurrentAccountCode(function (code, isNweCode) {
+            if (!isNweCode) {
+                var inviteUrl = document.location.protocol + '//' + window.location.host + location.pathname + "?rCode=" + code
+                $('.data-inviteUrl').html(inviteUrl)
+                $('.data-inviteUrl-copy').data("value", inviteUrl).show()
+
+                $('.data-contractUserInfoCode').html(code).val(code)
+                $('.data-contractUserInfoCode-copy').data("value", code).show()
+
+                $('.data-contractUserInfoCode-div').show()
+                $('.data-contractUserInfoCode-div2').hide()
+            } else {
+                $('.data-inviteUrl').html('无'.toTranslate())
+                $('.data-inviteUrl-copy').hide()
+
+                $('.data-contractUserInfoCode').html('无'.toTranslate()).val('无'.toTranslate())
+                $('.data-contractUserInfoCode-copy').hide()
+
+                $('.data-contractUserInfoCode-div').hide()
+                $('.data-contractUserInfoCode-div2').show()
+            }
+        })
+
+    }
+    //复制邀请码
+    function copyInvitationlCode(onthis) {
+        var title = $(onthis).data('title')
+        var value = $(onthis).data('value')
+        if (!value) {
+            return;
+        }
+        try {
+            var oInput = document.createElement('input');
+            oInput.value = value;
+            document.body.appendChild(oInput);
+            oInput.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            oInput.style.display = 'none';
+            msgtips2(title + '复制成功'.toTranslate());
+        } catch (e) {
+            console.log(e)
+            msgtips('复制失败'.toTranslate());
+        }
+    }
+</script>
+<script type="text/html" id="loading_templet">
+    <p class="home-p" i18n i18n-html="正在加载记录...">正在加载记录...</p>
+</script>
+<script type="text/html" id="nocontent_templet">
+    <div class="notime">
+        <img src="./Theme/DApp/img/notime.png" />
+        <p i18n i18n-html="暂无数据">暂无数据</p>
+    </div>
+</script>
+<script type="text/html" id="data_activationCodeRecords_templet">
+    <ul>
+        <li>
+            <h1>{{getCodeLevel(d.Level)}}</h1>
+            <p i18n i18n-html="等级">等级</p>
+        </li>
+
+        <li class="text-right">
+            <h3 class="text-fall">{{d.Code}}</h3>
+            <p i18n i18n-html="激活码">激活码</p>
+        </li>
+
+        <li class="text-right">
+            {{#if(d.Status == '1'){ }}
+            <button type="button" class="trend-btn btn-fall copyData-activationCodeRecords" data-title="激活码" data-value="{{d.Code}}" i18n i18n-html="复制">复制</button>
+            {{#}else{ }}
+            <h3 class="text-fall" i18n i18n-html="已使用">已使用</h3>
+            <p i18n i18n-html="状态">状态</p>
+            {{#} }}
+        </li>
+    </ul>
+</script>
+<script type="text/html" id="data_buyTicketRecords_templet">
+    <li>
+        <a class="list-no-pic">
+            <h3>{{getBuyType(d.Type)}}</h3>
+            <p>{{d.Time.dateFormat('yyyy-MM-dd HH:mm:ss')}}</p>
+            <span class="bill-plus">{{d.ExchangeMoney}}</span>
+        </a>
+    </li>
+</script>
+<script type="text/html" id="data_userOffspring_templet">
+    <div class="record-list-content">
+        <span>{{d.Index}}</span>
+        <span>{{d.Code}}</span>
+        <span>{{getCodeLevel(d.Level)}}</span>
+        <span>{{d.investAmount}}</span>
+    </div>
+</script>
+
+<script type="text/html" id="data_signInRecords_templet">
+    <li>
+        <a class="list-no-pic">
+            <h3 i18n i18n-html="签到挖矿">签到挖矿</h3>
+            <p>{{d.Time.dateFormat('yyyy-MM-dd HH:mm:ss')}}</p>
+            <span class="bill-plus">{{d.Money}}GME</span>
+        </a>
+    </li>
+</script>
+
+<script type="text/html" id="data_investRecords_templet">
+    <li>
+        <a class="list-no-pic">
+            <h3>{{getInvestLevel(d.Level)}}</h3>
+            <p>{{d.InvestTime.dateFormat('yyyy-MM-dd HH:mm:ss')}}</p>
+            <span class="bill-plus">{{d.Money}}</span>
+        </a>
+    </li>
+</script>
+<script>
+
+    function getCodeLevel(level) {
+        switch (level) {
+            case "0":
+                return "VIP0"
+                break;
+            case "1":
+                return "VIP1"
+                break;
+            case "2":
+                return "VIP2"
+                break;
+            case "3":
+                return "VIP3"
+                break;
+            default:
+                return 'VIP0';
+                break;
+        }
+    }
+    function getBuyType(type) {
+        switch (type) {
+            case "0":
+                return "购买通令".toTranslate()
+                break;
+            case "1":
+                return "创世小节点".toTranslate()
+                break;
+            case "2":
+                return "创世中节点".toTranslate()
+                break;
+            case "3":
+                return "创世大节点".toTranslate()
+                break;
+            case "4":
+                return "联盟合伙人".toTranslate()
+                break;
+            default:
+                return '';
+                break;
+        }
+    }
+    function getInvestLevel(level) {
+        switch (level) {
+
+            case "1":
+                return "初级节点".toTranslate()
+                break;
+            case "2":
+                return "中级节点".toTranslate()
+                break;
+            case "3":
+                return "高级节点".toTranslate()
+                break;
+            case "4":
+                return "超级节点".toTranslate()
+                break;
+            case "5":
+                return "顶级节点".toTranslate()
+                break;
+            default:
+                return '';
+                break;
+        }
+    }
+
+    //显示列表记录
+    function loadList() {
+        //获取当前地址
+        _DappContractPlugin.getCurrentAccount(function (_addr) {
+            //显示列表-激活码
+            //$('.copyData-activationCodeAll').data('value', '')
+            //business_RecordDataList("activationCodeRecords", function (recordDataList, key) {
+            //    //获取记录完成
+            //    //console.log(recordDataList)
+            //    handle_RecordsDataListShow(recordDataList, key)
+            //    //绑定复制按钮
+            //    var $copyDataArr = $('.copyData-activationCodeRecords');
+            //    for (var i = 0; i < $copyDataArr.length; i++) {
+            //        band_Clipboard($copyDataArr[i])
+            //    }
+            //    //赋值赋值所有激活码
+            //    var copyAllStr = ''
+            //    for (var i = 0; i < recordDataList.length; i++) {
+            //        if (recordDataList[i].Status == '1') {
+            //            copyAllStr += getCodeLevel(recordDataList[i].Level) + '：' + recordDataList[i].Code
+            //        } else {
+            //            copyAllStr += getCodeLevel(recordDataList[i].Level) + '：' + recordDataList[i].Code + '【' + '已使用'.toTranslate() + '】'
+            //        }
+            //        copyAllStr += '\n'
+            //    }
+            //    $('.copyData-activationCodeAll').data('value', copyAllStr)
+            //}, function (index, cb, i, key) {
+            //    //获取记录信息
+            //    business_activationCodeRecords(index, function (_recordsData) {
+            //        typeof cb === "function" && cb(_recordsData, index)
+            //    }, _addr)
+            //}, function (cb, key) {
+            //    handle_RecordsDataListShow_Start(key)
+            //    //获取记录条目数
+            //    Dapp_getContractUserInfo(function (resulr, rdata) {
+            //        if (resulr) {
+            //            //console.log(rdata)
+            //            var countNunber = rdata[0][6]
+            //            if (countNunber != '0') {
+            //                typeof cb === "function" && cb(countNunber)
+            //            } else {
+            //                handle_RecordsDataListShow_nocontent(key)
+            //            }
+            //        }
+            //    }, _addr)
+            //})
+
+            //显示列表-兑换记录
+            business_RecordDataList("buyTicketRecords", function (recordDataList, key) {
+                //获取记录完成
+                //console.log(recordDataList)
+                handle_RecordsDataListShow(recordDataList, key, 1)
+            }, function (index, cb, i, key) {
+                //获取记录信息
+                business_BuyTicketRecords(index, function (_recordsData) {
+                    typeof cb === "function" && cb(_recordsData, index)
+                }, _addr)
+            }, function (cb, key) {
+                handle_RecordsDataListShow_Start(key)
+                //获取记录条目数
+                Dapp_getContractUserInfo(function (resulr, rdata) {
+                    if (resulr) {
+                        //console.log(rdata)
+                        var countNunber = rdata[0][9]
+                        if (countNunber != '0') {
+                            typeof cb === "function" && cb(countNunber)
+                        } else {
+                            handle_RecordsDataListShow_nocontent(key)
+                        }
+                    }
+                }, _addr)
+            })
+            //显示会员推荐列表
+            var urkey = 'userOffspring'
+            business_getUserOffspring(function (rdata) {
+                handle_RecordsDataListShow_Start(urkey)
+                var countNunber = rdata.length
+                if (countNunber) {
+                    handle_RecordsDataListShow(rdata, urkey)
+                } else {
+                    handle_RecordsDataListShow_nocontent(urkey)
+                }
+            })
+            //显示列表-签到记录
+            business_RecordDataList("signInRecords", function (recordDataList, key) {
+                //获取记录完成
+                //console.log(recordDataList)
+                handle_RecordsDataListShow(recordDataList, key, 1)
+            }, function (index, cb, i, key) {
+                //获取记录信息
+                business_SignInRecordByAddress(index, function (_recordsData) {
+                    typeof cb === "function" && cb(_recordsData, index)
+                }, _addr)
+            }, function (cb, key) {
+                handle_RecordsDataListShow_Start(key)
+                //获取记录条目数
+                Dapp_getContractUserInfo(function (resulr, rdata) {
+                    if (resulr) {
+                        //console.log(rdata)
+                        var countNunber = rdata[0][11]
+                        if (countNunber != '0') {
+                            typeof cb === "function" && cb(countNunber)
+                        } else {
+                            handle_RecordsDataListShow_nocontent(key)
+                        }
+                    }
+                }, _addr)
+            })
+
+            //显示列表-投资记录
+            business_RecordDataList("investRecords", function (recordDataList, key) {
+                //获取记录完成
+                //console.log(recordDataList)
+                handle_RecordsDataListShow(recordDataList, key, 1)
+            }, function (index, cb, i, key) {
+                //获取记录信息
+                business_InvestRecordByAddress(index, function (_recordsData) {
+                    typeof cb === "function" && cb(_recordsData, index)
+                }, _addr)
+            }, function (cb, key) {
+                handle_RecordsDataListShow_Start(key)
+                //获取记录条目数
+                Dapp_getContractUserInfo(function (resulr, rdata) {
+                    if (resulr) {
+                        //console.log(rdata)
+                        var countNunber = rdata[0][10]
+                        if (countNunber != '0') {
+                            typeof cb === "function" && cb(countNunber)
+                        } else {
+                            handle_RecordsDataListShow_nocontent(key)
+                        }
+                    }
+                }, _addr)
+            })
+        })
+    }
+    //处理显示列表数据
+    function handle_RecordsDataListShow(data, key, desc) {
+        if (desc == 0 || !desc) {
+            //正序不处理
+        } else if (desc == 1) {
+            //倒序
+            //数组长度
+            var len = data.length;
+
+            //倒转后的新数组
+            var newData = $.map(data, function (v, i) {// map方法匿名函数传的值v是值、i是索引。
+                return data[len - 1 - i];
+            });
+            data = newData
+        }
+
+        layui.use(['laytpl'], function () {
+            laytpl = layui.laytpl;
+            var list = [];
+            layui.each(data, function (index, item) {
+                laytpl($("#data_" + key + "_templet").html()).render(item, function (html) {
+                    list.push(html.HtmlToTranslate_i18n());
+                });
+            });
+            $('.data-' + key).html(list.join(''))
+        });
+    }
+    function handle_RecordsDataListShow_Start(key) {
+        $('.data-' + key).html($("#loading_templet").html().HtmlToTranslate_i18n())
+    }
+    function handle_RecordsDataListShow_nocontent(key) {
+        $('.data-' + key).html($("#nocontent_templet").html().HtmlToTranslate_i18n())
+    }
+</script>
+

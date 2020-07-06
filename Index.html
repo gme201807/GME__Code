@@ -1208,6 +1208,9 @@
 </script>
 
 <!-- Dapp JS -->
+<script>
+    //_istest = true;
+</script>
 <script src="./Plugin/Dapp/MathRepairV4.js?v=1.0.2"></script>
 <script src="./Plugin/Dapp/DappBase.Plugin.js?v=1.1.9"></script>
 <script src="./Plugin/Dapp/DappContract.Plugin.js?v=1.1.9"></script>
@@ -1583,6 +1586,9 @@
     addTranslateArr("请输入正确的推荐码", "请输入正确的推荐码")
     addTranslateArr("请输入激活码", "请输入激活码")
     addTranslateArr("激活码不正确", "激活码不正确")
+    addTranslateArr("授权操作金额失败", "授权操作金额失败")
+    addTranslateArr("门票", "门票")
+    addTranslateArr("余额不足", "余额不足")
 </script>
 <script>
     //购买门票
@@ -1630,6 +1636,7 @@
 <script>
     var investMinMoney;
     var investMaxMoney;
+
     //投资
     function invest(code, rCode) {
         var investAmount = $('.investAmount').val();
@@ -1657,11 +1664,13 @@
             return;
         }
         if (Number(investAmount) < Number(investMinMoney)) {
-            msgtips2("当前等级投资金额最小为".toTranslate() + investMinMoney)
+            //msgtips2("当前等级投资金额最小为".toTranslate() + investMinMoney)
+            msgtips2("请输入大于等于".toTranslate() + investMinMoney + "的数量".toTranslate())
             return;
         }
         if (Number(investAmount) >= Number(investMaxMoney)) {
-            msgtips2("当前等级投资金额不能大于或等于".toTranslate() + investMaxMoney)
+            //msgtips2("当前等级投资金额不能大于或等于".toTranslate() + investMaxMoney)
+            msgtips2("请输入少于".toTranslate() + investMaxMoney + "的数量".toTranslate())
             return;
         }
 
@@ -1768,7 +1777,7 @@
                 if (rdata.code == 4001) {
                     msgtips2("交易已取消".toTranslate())
                 } else {
-                    msgtips2("操作失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                    msgtips2("结算失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
                 }
             }
         });
@@ -1783,7 +1792,7 @@
                 if (rdata.code == 4001) {
                     msgtips2("交易已取消".toTranslate())
                 } else {
-                    msgtips2("操作失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
+                    msgtips2("提现失败".toTranslate() + '(' + rdata.toTranslateArr() + ')')
                 }
             }
         });
@@ -2144,4 +2153,3 @@
         $('.data-' + key).html($("#nocontent_templet").html().HtmlToTranslate_i18n())
     }
 </script>
-

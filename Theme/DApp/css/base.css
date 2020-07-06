@@ -103,7 +103,7 @@ i,em{ font-style: normal;}
 
 img{ border: none; outline: none; vertical-align: top;}
 
-input, textarea, button{ color: #111; border: none; background: none; outline: none;}
+input, textarea, button{ color: #fff; border: none; background: none; outline: none;}
 input, textarea{ -webkit-appearance: none; appearance: none; border-radius: 0;}
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{ color: #aaa;}
 

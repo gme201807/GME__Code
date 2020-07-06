@@ -246,7 +246,7 @@ section {/* background:#394458;*/}
 100% {transform:scale(1);opacity:1;}
 }
 .loading-3 {position:relative;}
-.loading-3 i {display:block;width:15px;height:15px;border-radius:50%;background-color:#333;position:absolute;}
+.loading-3 i {display:block;width:15px;height:15px;border-radius:50%;background-color:#f20;position:absolute;}
 .loading-3 i:nth-child(1) {top:25px;left:0;-webkit-animation:loading-3 1s ease 0s infinite;}
 .loading-3 i:nth-child(2) {top:17px;left:17px;-webkit-animation:loading-3 1s ease -0.12s infinite;}
 .loading-3 i:nth-child(3) {top:0px;left:25px;-webkit-animation:loading-3 1s ease -0.24s infinite;}

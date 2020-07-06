@@ -433,7 +433,7 @@ var HandleContractUserInfo = function (e, isAuthorize, networkType, defaultAccou
                                         if (Number(_recordsData.Status) == 0) {
                                             staticBouns = _recordsData.Money.mul(investLevelPoundage).mul(differTime).div(1000);
                                         }
-                                        var enableSettleETHAmount = staticBouns.add(rdata[1]).add(rdata[2]).add(rdata[3]);
+                                        var enableSettleETHAmount = staticBouns.add(rdata[1].add(rdata[2]).add(rdata[3]).div(_ethWei));
                                         if (Number(enableSettleETHAmount) > Number(maxOutMoney)) {
                                             enableSettleETHAmount = maxOutMoney;
                                         }
@@ -1550,7 +1550,7 @@ function business_settlement(cb) {
                                         if (Number(_recordsData.Status) == 0) {
                                             staticBouns = _recordsData.Money.mul(investLevelPoundage).mul(differTime).div(1000);
                                         }
-                                        var enableSettleETHAmount = staticBouns.add(tempRewardData[1]).add(tempRewardData[2]).add(tempRewardData[3]);
+                                        var enableSettleETHAmount = staticBouns.add(tempRewardData[1].add(tempRewardData[2]).add(tempRewardData[3]).div(_ettWei));
                                         if (Number(enableSettleETHAmount) > Number(maxOutMoney)) {
                                             enableSettleETHAmount = maxOutMoney;
                                         }
@@ -1579,7 +1579,7 @@ function business_settlement(cb) {
                                     }
                                 }, null, temUserInfo[0][10].sub(1));
                             } else {
-                                var enableSettleETHAmount = tempRewardData[1].add(tempRewardData[2]).add(tempRewardData[3]);
+                                var enableSettleETHAmount = tempRewardData[1].add(tempRewardData[2]).add(tempRewardData[3]).div(_ettWei);
                                 //结算手续费计算 tempData[33]-比例 ETT价格tempData[4]
                                 var ethPoundage = enableSettleETHAmount.mul(tempContractStateData[4]).mul(tempContractStateData[33]).div(1000).div(_ettWei);
 

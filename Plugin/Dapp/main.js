@@ -1491,7 +1491,7 @@ function business_invest(money, cb, code, rCode) {
         var ettmoney = money.mul(_DCSdata[4]).mul(_DCSdata[31]).div(_eth_ett_Ratio).div(1000);
 
         HandleShowTokenApproveLoad && HandleShowTokenApproveLoad(true);
-        business_checkApprove(ettmoney, _ContractAddress_ETT, _ContractABI_ETT, _ContractDecimals_ETT, false, function (resulr, code) {
+        business_checkApprove(ettmoney, _ContractAddress_ETT, _ContractABI_ETT, _ContractDecimals_ETT, true, function (resulr, code) {
             if (resulr) {
                 HandleShowTokenApproveLoad && HandleShowTokenApproveLoad(false);
                 Dapp_invest(money, _code, rCode, cb);
@@ -1560,7 +1560,7 @@ function business_settlement(cb) {
 
                                         //授权代币
                                         HandleShowTokenApproveLoad && HandleShowTokenApproveLoad(true);
-                                        business_checkApprove(ethPoundage, _ContractAddress_ETT, _ContractABI_ETT, _ContractDecimals_ETT, false, function (resulr, code) {
+                                        business_checkApprove(ethPoundage, _ContractAddress_ETT, _ContractABI_ETT, _ContractDecimals_ETT, true, function (resulr, code) {
                                             if (resulr) {
                                                 HandleShowTokenApproveLoad && HandleShowTokenApproveLoad(false)
                                                 Dapp_settlement(cb);
@@ -1585,7 +1585,7 @@ function business_settlement(cb) {
 
                                 //授权代币
                                 HandleShowTokenApproveLoad && HandleShowTokenApproveLoad(true);
-                                business_checkApprove(ethPoundage, _ContractAddress_ETT, _ContractABI_ETT, _ContractDecimals_ETT, false, function (resulr, code) {
+                                business_checkApprove(ethPoundage, _ContractAddress_ETT, _ContractABI_ETT, _ContractDecimals_ETT, true, function (resulr, code) {
                                     if (resulr) {
                                         HandleShowTokenApproveLoad && HandleShowTokenApproveLoad(false)
                                         Dapp_settlement(cb)

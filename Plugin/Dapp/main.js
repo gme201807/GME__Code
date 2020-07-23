@@ -387,7 +387,7 @@ var HandleContractUserInfo = function (e, isAuthorize, networkType, defaultAccou
                 }
                 //已结算区
                 $('.data-contractUserInfo12').html(rdata[0][12].div(_ethWei).toFloor(_ContractDisplayPrecision)); // ETH 可提现收益
-                $('.data-contractUserInfo13').html(rdata[0][13].div(_ettWei).toFloor(_ContractDisplayPrecision)); // GME 可提现收益               
+                $('.data-contractUserInfo13').html(rdata[0][13].div(_ettWei).toFloor(2)); // GME 可提现收益               
 
                 //资产页质押数据显示
                 if (Number(rdata[0][10]) > 0) {
@@ -441,7 +441,7 @@ var HandleContractUserInfo = function (e, isAuthorize, networkType, defaultAccou
                                         $('.data-contractUserInfo-Unsettled-ETT').html(rdata[4].div(_ettWei).toFloor(_ContractDisplayPrecision));
                                         //可提现显示 Number(rdata[4])>= tempData[34];
                                         if (Number(tempUserInfoData[0][13]) >= Number(tempContractStateData[34])) {
-                                            $('.data-contractUserInfo-cashout-ETT').html(tempUserInfoData[0][13].div(_ettWei).toFloor(_ContractDisplayPrecision));
+                                            $('.data-contractUserInfo-cashout-ETT').html(tempUserInfoData[0][13].div(_ettWei).toFloor(2));
                                         }
                                         else {
                                             $('.data-contractUserInfo-cashout-ETT').html("0.00");
@@ -450,7 +450,7 @@ var HandleContractUserInfo = function (e, isAuthorize, networkType, defaultAccou
                                         var ethPoundage = enableSettleETHAmount.mul(tempContractStateData[4]).mul(tempContractStateData[33]).div(1000);
                                         var ettPoundage = rdata[4].mul(tempContractStateData[33]).div(1000);
                                         var totalPoundage = ethPoundage.add(ettPoundage).div(_ettWei).toFloor(_ContractDisplayPrecision);
-                                        $('.data-contractUserInfo-cashout-settle-poundage-ETT').html(totalPoundage);
+                                        $('.data-contractUserInfo-cashout-settle-poundage-ETT').html(totalPoundage.toFloor(2));
                                     }, defaultAccount);
                                 }
                             });
